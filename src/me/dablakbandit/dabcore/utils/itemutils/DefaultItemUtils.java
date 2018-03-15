@@ -999,6 +999,10 @@ public class DefaultItemUtils implements IItemUtils{
 		if(!map.keySet().containsAll(map1.keySet()))
 			return false;
 		for(Entry<String, Object> e : map.entrySet()){
+			if (e.getKey() == "SkullOwner")
+			{
+				continue;
+			}
 			Object o = e.getValue();
 			Object o1 = map1.get(e.getKey());
 			if(!compareBaseTag(o, o1))
